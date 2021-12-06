@@ -1,0 +1,6 @@
+<h1>編集 : <%= @message.id %></h1>
+
+<%= render 'messages/form_message', message: @message %>
+
+<%= link_to '詳細へ', message_path(@message) %> |
+<%= link_to '一覧へ', messages_path %>

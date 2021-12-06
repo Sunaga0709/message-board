@@ -1,0 +1,7 @@
+<h1>メッセージ詳細 : <%= @message.id %></h1>
+
+<p><%= @message.context %></p>
+
+<%= link_to '編集へ', edit_message_path(@message) %> |
+<%= link_to '一覧へ', messages_path %> |
+<%= link_to '削除', message_path(@message), method: :delete, data: {confirm: 'よろしいですか？'} %>
