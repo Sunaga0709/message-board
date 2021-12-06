@@ -1,5 +1,6 @@
 <h1>メッセージ詳細 : <%= @message.id %></h1>
 
+<h5><%= @message.title %></h5>
 <p><%= @message.context %></p>
 
 <%= link_to '編集へ', edit_message_path(@message) %> |
