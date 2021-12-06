@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :message_find, only: [:show, :edit, :update, :destroy]
+  before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   def index
     @messages = Message.order(id: :desc)
@@ -49,7 +49,7 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:context)
   end
 
-  def message_find
+  def set_message
     @message = Message.find(params[:id])
   end
 end
