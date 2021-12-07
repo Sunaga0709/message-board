@@ -2,5 +2,5 @@
 
 <%= render 'messages/form_message', message: @message %>
 
-<%= link_to '詳細へ', message_path(@message) %> |
-<%= link_to '一覧へ', messages_path %>
+<%= link_to '詳細へ', message_path(@message), class: 'btn btn-secondary' %> 
+<%= link_to '一覧へ', root_path, class: 'btn btn-secondary' %>

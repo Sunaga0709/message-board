@@ -3,6 +3,7 @@
 <h5><%= @message.title %></h5>
 <p><%= @message.context %></p>
 
-<%= link_to '編集へ', edit_message_path(@message) %> |
-<%= link_to '一覧へ', messages_path %> |
-<%= link_to '削除', message_path(@message), method: :delete, data: {confirm: 'よろしいですか？'} %>
+<%= link_to '編集へ', edit_message_path(@message), class: 'btn btn-secondary' %> 
+<%= link_to '一覧へ', root_path, class: 'btn btn-secondary' %> 
+<%= link_to '削除', message_path(@message), method: :delete, data: {confirm: 'よろしいですか？'},
+    class: 'btn btn-danger' %>
